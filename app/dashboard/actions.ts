@@ -38,7 +38,7 @@ export async function createCategory(prevState: string | undefined, formData: Fo
 const CreateExpenseSchema = z.object({
     amount: z.coerce.number().min(0.01, "L'import ha de ser positiu"),
     description: z.string().min(1, "La descripció és obligatòria"),
-    type: z.enum(['ONE_TIME', 'MONTHLY', 'ANNUAL']),
+    type: z.enum(['PUNTUAL', 'MENSUAL', 'ANUAL']),
     categoryId: z.string(),
 })
 

@@ -73,11 +73,11 @@ export default function AddExpenseForm({ categoryId }: { categoryId: string }) {
                         id="type"
                         name="type"
                         className="block w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 ring-inset ring-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
-                        defaultValue="MONTHLY"
+                        defaultValue="PUNTUAL"
                     >
-                        <option value="ONE_TIME">Puntual</option>
-                        <option value="MONTHLY">Mensual</option>
-                        <option value="ANNUAL">Anual</option>
+                        <option value="PUNTUAL">Puntual</option>
+                        <option value="MENSUAL">Mensual</option>
+                        <option value="ANUAL">Anual</option>
                     </select>
                 </div>
             </div>

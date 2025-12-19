@@ -19,7 +19,7 @@ model Category {
   id      String    @id @default(cuid())
   name    String
   userId  String
-  user    User      @relation(fields: [userId], references: [id])
+  user    User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   expenses Expense[]
 }
 
@@ -28,7 +28,7 @@ model Expense {
   amount      Float
   description String
   date        DateTime @default(now())
-  type        String   // 'ONE_TIME', 'MONTHLY', 'ANNUAL'
+  type        String   // 'PUNTUAL', 'MENSUAL', 'ANUAL'
   categoryId  String
-  category    Category @relation(fields: [categoryId], references: [id])
+  category    Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
 }
